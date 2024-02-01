@@ -1,0 +1,143 @@
+<!-- TuComponente.component.html -->
+
+<div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        Formulario de Estudiante
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputCedula">Cédula</label>
+              <input type="text" class="form-control" id="inputCedula" placeholder="Ingrese la cédula">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputNombre">Nombre</label>
+              <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese el nombre">
+            </div>
+          </div>
+  
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputApellido">Apellido</label>
+              <input type="text" class="form-control" id="inputApellido" placeholder="Ingrese el apellido">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="selectCarrera">Carrera</label>
+              <select id="selectCarrera" class="form-control">
+                <option value="ingenieria">Ingeniería</option>
+                <option value="informatica">Informática</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="selectDedicacion">Dedicación</label>
+              <select id="selectDedicacion" class="form-control">
+                <option value="tiempo-completo">Tiempo completo</option>
+                <option value="medio-tiempo">Medio tiempo</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="selectTipoDocumento">Tipo de Documento</label>
+              <select id="selectTipoDocumento" class="form-control">
+                <option value="Nombramiento">Nombramiento</option>
+                <option value="Contrato">Contrato</option>
+              </select>
+            </div>
+          </div>
+  
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        Tabla de Estudiantes
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Cédula</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Carrera</th>
+              <th>Dedicación</th>
+              <th>Tipo de Documento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>123456789</td>
+              <td>Juan</td>
+              <td>Pérez</td>
+              <td>Ingeniería</td>
+              <td>Tiempo Completo</td>
+              <td>DNI</td>
+            </tr>
+            
+            <tr>
+              <td></td>
+              <td><input type="text" class="form-control" placeholder="Cédula"></td>
+              <td><input type="text" class="form-control" placeholder="Nombre"></td>
+              <td><input type="text" class="form-control" placeholder="Apellido"></td>
+              <td>
+                <select class="form-control">
+                  <option value="ingenieria">Ingeniería</option>
+                  <option value="informatica">Informática</option>
+                  <!-- Agrega más opciones según sea necesario -->
+                </select>
+              </td>
+              <td>
+                <select class="form-control">
+                  <option value="tiempo-completo">Tiempo completo</option>
+                  <option value="medio-tiempo">Medio tiempo</option>
+                  <!-- Agrega más opciones según sea necesario -->
+                </select>
+              </td>
+              <td>
+                <select class="form-control">
+                  <option value="dni">DNI</option>
+                  <option value="pasaporte">Pasaporte</option>
+                  <!-- Agrega más opciones según sea necesario -->
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="container mt-5">
+    <h2>Tabla de Profesores</h2>
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Cédula</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <!-- Agrega más columnas según tus datos -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let profesor of profesores">
+          <td>{{ profesor.cedulaIdentidad }}</td>
+          <td>{{ profesor.nombres }}</td>
+          <td>{{ profesor.apellidos }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
